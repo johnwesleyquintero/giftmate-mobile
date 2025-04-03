@@ -1,13 +1,27 @@
-# dependencies
+# Dependencies
 node_modules/
 
-# expo
-.expo/
+# Development
+.env
+.env*.local
+
+# Build artifacts
 dist/
 web-build/
-expo-env.d.ts
+*.tsbuildinfo
 
-# native
+# Expo
+.expo/
+expo-env.d.ts
+.bolt/
+.metro-health-check*
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Native development
 *.orig.*
 *.jks
 *.p8
@@ -15,20 +29,35 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macos
+# OS-specific
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
 
-# typescript
-*.tsbuildinfo
+# Temporary files
+*.tmp
+*.temp
+
+# Test coverage
+coverage/
+
+# Lock files
+yarn.lock
+package-lock.json
+
+# Expo generated files
+.expo-shared/
+.expo/
+
+# Metro bundler cache
+.metro/
+
+# Babel cache
+.babel_cache/

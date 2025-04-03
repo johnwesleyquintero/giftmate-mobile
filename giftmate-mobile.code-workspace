@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"javascript.suggest.autoImports": true,
+		"typescript.suggest.autoImports": true,
+		"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+		"eslint.packageManager": "npm",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"expo.vscode-expo-tools",
+			"bycedric.vscode-expo",
+			"msjsdiag.vscode-react-native"
+		]
+	}
+}

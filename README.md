@@ -1,216 +1,103 @@
 <div align="center">
   <img src="assets/images/logo.svg" alt="GiftMate Logo" width="400" />
-
+  
   [![Netlify Status](https://api.netlify.com/api/v1/badges/0a2e53da-723e-4bb4-ae3b-6113fc5e96ea/deploy-status)](https://app.netlify.com/sites/giftmate-dev/deploys)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)]()
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 </div>
 
-Dev: https://stackblitz.com/edit/sb1-yycfvmew
+# GiftMate - Never Miss a Special Occasion Again
 
-## Overview
+## ✨ Features
 
-GiftMate - A smart companion app that helps you track important dates, manage gift ideas, and strengthen relationships by never missing special occasions. Perfect for remembering birthdays, anniversaries, and creating thoughtful gift lists for your loved ones.
+- 📅 Smart date tracking for birthdays, anniversaries, and special events
+- 🎁 Personalized gift idea management
+- 🔔 Customizable reminders and notifications
+- 👥 Contact management with relationship tracking
+- 🔒 Secure authentication with Supabase
+- 🔄 Real-time sync across devices
 
+## 🚀 Getting Started
 
-## Tech Stack
+### Prerequisites
+- Node.js v16+
+- Expo CLI
+- Supabase account
 
-- **Frontend**: React Native, Expo
-- **State Management**: React Context API
-- **Styling**: NativeWind (Tailwind CSS)
-- **Navigation**: React Navigation
-- **Backend**: Supabase (Auth, Database, Storage)
-- **Tooling**: TypeScript, Prettier, ESLint
-
-## Installation
-
+### Installation
 ```bash
+# Clone the repository
 git clone https://github.com/your-org/giftmate-app.git
 cd giftmate-app
+
+# Install dependencies
 npm install
+
+# For iOS (if using macOS)
+cd ios && pod install && cd ..
 ```
 
-## Development Setup
-
-1. Create `.env` file from template:
-
+### Configuration
+1. Create `.env` file:
 ```bash
 cp .env.example .env
 ```
 
-2. Configure Supabase credentials:
-
+2. Update with your Supabase credentials:
 ```ini
 SUPABASE_URL=your-project-url
 SUPABASE_KEY=your-anon-key
 ```
 
-3. Start development server:
-
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-## Authentication Guide
+## 📸 Screenshots
 
-### Email/Password Flow
+<div align="center">
+  <img src="assets/screenshots/dashboard.png" width="200" alt="Dashboard" />
+  <img src="assets/screenshots/gift-list.png" width="200" alt="Gift List" />
+  <img src="assets/screenshots/reminders.png" width="200" alt="Reminders" />
+</div>
 
-```tsx
-// app/auth/SignUpScreen.tsx
-export const SignUpForm = () => {
-  const { signUp } = useAuth();
+## 🛠 Development
 
-  const handleSubmit = async (email: string, password: string) => {
-    try {
-      await signUp(email, password);
-      router.replace('/dashboard');
-    } catch (error) {
-      showErrorAlert(error.message);
-    }
-  };
+### Scripts
+```bash
+# Start development server
+npm run dev
 
-  return <AuthForm type="signup" onSubmit={handleSubmit} />;
-};
+# Run tests
+npm test
+
+# Lint code
+npm run lint
+
+# Build for production
+npm run build
 ```
 
-### OAuth Providers
+## 🤝 Contributing
 
-```tsx
-// hooks/useAuth.ts
-export const useAuth = () => {
-  const signInWithOAuth = async (provider: 'google' | 'apple') => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider });
-    if (error) throw new AuthenticationError(error.message);
-  };
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-  return { signInWithOAuth };
-};
-```
+### First Time Contributors
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Component Documentation
+## 📚 Documentation
 
-### GiftCard Component
+For detailed documentation, please visit our [documentation site](https://giftmate-docs.example.com).
 
-```tsx
-// components/GiftCard.tsx
-interface GiftCardProps {
-  gift: Gift;
-  onPress?: () => void;
-}
+## 📄 License
 
-export const GiftCard = ({ gift, onPress }: GiftCardProps) => (
-  <Pressable onPress={onPress}>
-    <Image source={{ uri: gift.imageUrl }} />
-    <Text>{gift.name}</Text>
-    <Text>{gift.description}</Text>
-  </Pressable>
-);
-```
-
-**Props**:
-
-- `gift`: Gift object containing details
-- `onPress`: Callback when card is pressed
-
-## Supabase Integration
-
-### Real-time Subscriptions
-
-```tsx
-// hooks/useGifts.ts
-export const useGifts = () => {
-  useEffect(() => {
-    const channel = supabase
-      .channel('gifts')
-      .on(
-        'postgres_changes',
-        {
-          event: '*',
-          schema: 'public',
-          table: 'gifts',
-        },
-        handleGiftUpdate,
-      )
-      .subscribe();
-
-    return () => {
-      channel.unsubscribe();
-    };
-  }, []);
-};
-```
-
-## Documentation Structure
-
-📚 **Core Guides**:
-
-- [Getting Started](/docs/getting-started.md) - Environment setup & installation
-- [Component Docs](/docs/components.md) - UI component specifications
-- [Authentication Guide](/docs/authentication.md) - Supabase integration
-- [Best Practices](/docs/best-practices.md) - Coding standards & security
-
-## Documentation Roadmap
-
-- [ ] Add performance benchmarking guide
-- [ ] Create testing strategy document
-- [ ] Develop deployment playbook
-
-## Contributing
-
-Help us improve documentation by:
-
-1. Following our [style guide](CONTRIBUTING.md#documentation)
-2. Using the template:
-
-```markdown
-## Feature Name
-
-### Purpose
-
-<!-- Describe functionality -->
-
-### Implementation
-```
-
-3. Submitting PRs to the `docs` directory
-
-### Code Standards
-
-1. TypeScript strict mode
-2. Functional components with hooks
-3. Atomic design pattern
-4. 80% test coverage
-
-### PR Checklist
-
-- [ ] Linting passes
-- [ ] Tests updated
-- [ ] Documentation added
-- [ ] Supabase migrations (if needed)
-
-## Troubleshooting
-
-| Error                       | Solution                  |
-| --------------------------- | ------------------------- |
-| `Network Request Failed`    | Check Supabase URL/Key    |
-| `Invalid OAuth Credentials` | Verify deep linking setup |
-| `Expo SDK Mismatch`         | Run `expo doctor --fix`   |
-
-## Performance Tips
-
-1. Memoize expensive computations
-2. Virtualize long lists
-3. Optimize image sizes
-4. Batch Supabase requests
-5. Use error boundaries
-
-## Security Practices
-
-- Row Level Security (RLS) enabled
-- JWT refresh every 15 minutes
-- SecureStore for sensitive data
-- Input sanitization for DB queries
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-_Documentation version: 1.2.0 | Last updated: ${new Date().toISOString().split('T')[0]}_
+_Last updated: ${new Date().toISOString().split('T')[0]}_

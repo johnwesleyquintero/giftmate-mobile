@@ -7,7 +7,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarStyle: styles.tabBar,
-        tabBarActiveTintColor: '#007AFF',
+        tabBarActiveTintColor: '#FF6B8B',
         tabBarInactiveTintColor: '#8E8E93',
         headerStyle: styles.header,
         headerTitleStyle: styles.headerTitle,
@@ -46,17 +46,23 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: '#FFFFFF',
-    borderTopColor: '#E5E5EA',
+    backgroundColor: 'white',
+    borderTopColor: '#FFE6EE',
     height: 84,
     paddingBottom: 30,
+    borderTopWidth: 2,
   },
   header: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#FF6B8B',
+    backgroundImage: 'linear-gradient(to right, #FF6B8B, #FF8E53)',
+    borderBottomWidth: 0,
+    elevation: 0,
+    shadowOpacity: 0,
   },
   headerTitle: {
-    fontSize: 17,
+    fontSize: 20,
     fontWeight: '600',
-    color: '#000000',
+    color: 'white',
+    fontFamily: 'Helvetica Neue',
   },
 });

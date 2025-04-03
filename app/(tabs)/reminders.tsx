@@ -27,7 +27,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.events}
             onValueChange={() => toggleSwitch('events')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
         <View style={styles.option}>
@@ -35,7 +35,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.giftSuggestions}
             onValueChange={() => toggleSwitch('giftSuggestions')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
         <View style={styles.option}>
@@ -43,7 +43,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.dateIdeas}
             onValueChange={() => toggleSwitch('dateIdeas')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
       </View>
@@ -55,7 +55,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.weekBefore}
             onValueChange={() => toggleSwitch('weekBefore')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
         <View style={styles.option}>
@@ -63,7 +63,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.dayBefore}
             onValueChange={() => toggleSwitch('dayBefore')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
         <View style={styles.option}>
@@ -71,7 +71,7 @@ export default function RemindersScreen() {
           <Switch
             value={notifications.dayOf}
             onValueChange={() => toggleSwitch('dayOf')}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
       </View>
@@ -82,7 +82,7 @@ export default function RemindersScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F2F7',
+    backgroundColor: '#FFF9FB',
   },
   section: {
     backgroundColor: '#FFFFFF',

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600"
+  style="background: linear-gradient(135deg, #FFF9FB, #FFE6EE); border-radius: 30px; overflow: hidden;">
+  <!-- Phone frame -->
+  <rect x="10" y="10" width="280" height="580" rx="30" fill="white" stroke="#FF6B8B" stroke-width="2" />
+
+  <!-- Status bar -->
+  <rect x="20" y="20" width="260" height="30" rx="5" fill="#FFF9FB" />
+  <circle cx="40" cy="35" r="3" fill="#FF6B8B" />
+  <circle cx="50" cy="35" r="3" fill="#FF8E53" />
+  <circle cx="60" cy="35" r="3" fill="#FF9BB3" />
+  <text x="270" y="38" font-family="Helvetica" font-size="12" text-anchor="end" fill="#5A3A4E">12:30</text>
+
+  <!-- App header -->
+  <rect x="20" y="60" width="260" height="60" rx="10" fill="url(#header-grad)" />
+  <defs>
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B8B" />
+      <stop offset="100%" stop-color="#FF8E53" />
+    </linearGradient>
+  </defs>
+  <text x="150" y="100" font-family="Helvetica Neue" font-size="20" font-weight="600" text-anchor="middle"
+    fill="white">GiftMate</text>
+
+  <!-- Placeholder content -->
+  <circle cx="150" cy="220" r="50" fill="#FF9BB3" opacity="0.2" />
+  <path d="M150,170 L170,220 L130,220 Z" fill="#FF6B8B" opacity="0.7" />
+
+  <!-- Upcoming events -->
+  <rect x="30" y="280" width="240" height="80" rx="10" fill="white" stroke="#FFB88C" stroke-width="1.5"
+    stroke-dasharray="4 2" />
+  <text x="40" y="310" font-family="Helvetica" font-size="14" fill="#5A3A4E">Our Anniversary</text>
+  <text x="40" y="330" font-family="Helvetica" font-size="12" fill="#FF6B8B">Feb 6, 2025</text>
+  <circle cx="220" cy="310" r="15" fill="#FF6B8B" opacity="0.1" />
+  <path d="M220,300 L225,310 L215,310 Z" fill="#FF6B8B" />
+
+  <!-- Bottom nav -->
+  <rect x="20" y="520" width="260" height="50" rx="25" fill="white" stroke="#FFE6EE" stroke-width="2" />
+  <circle cx="80" cy="545" r="8" fill="#FF6B8B" />
+  <circle cx="150" cy="545" r="8" fill="#FF9BB3" opacity="0.3" />
+  <circle cx="220" cy="545" r="8" fill="#FF9BB3" opacity="0.3" />
+</svg>

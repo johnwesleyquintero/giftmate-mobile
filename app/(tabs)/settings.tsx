@@ -27,7 +27,7 @@ export default function SettingsScreen() {
           <Switch
             value={locationEnabled}
             onValueChange={setLocationEnabled}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
         <View style={styles.option}>
@@ -35,7 +35,7 @@ export default function SettingsScreen() {
           <Switch
             value={darkMode}
             onValueChange={setDarkMode}
-            trackColor={{ false: '#D1D1D6', true: '#34C759' }}
+            trackColor={{ false: '#D1D1D6', true: '#FF6B8B' }}
           />
         </View>
       </View>
@@ -66,7 +66,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F2F7',
+    backgroundColor: '#FFF9FB',
   },
   section: {
     backgroundColor: '#FFFFFF',

@@ -58,7 +58,7 @@ export default function GiftsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F2F7',
+    backgroundColor: '#FFF9FB',
   },
   listContent: {
     padding: 16,
@@ -68,11 +68,13 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 16,
     overflow: 'hidden',
-    shadowColor: '#000',
+    shadowColor: '#FF6B8B',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+    borderWidth: 1,
+    borderColor: '#FFE6EE',
   },
   giftImage: {
     width: '100%',
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
   },
   giftPrice: {
     fontSize: 15,
-    color: '#007AFF',
+    color: '#FF6B8B',
     fontWeight: '600',
     marginBottom: 8,
   },
@@ -103,6 +105,6 @@ const styles = StyleSheet.create({
   },
   giftRating: {
     fontSize: 13,
-    color: '#FF9500',
+    color: '#FF8E53',
   },
 });

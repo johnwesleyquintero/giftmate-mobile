@@ -20,8 +20,8 @@ const interests: Interest[] = [
 
 export default function NewEventScreen() {
   const [title, setTitle] = useState('');
-  const [date, setDate] = useState('');
-  const [type, setType] = useState<'birthday' | 'anniversary' | 'other'>('birthday');
+  const [date, setDate] = useState(type === 'birthday' ? '2025-01-11' : type === 'anniversary' ? '2025-02-06' : '');
+  const [type, setType] = useState<'birthday' | 'anniversary' | 'other'>('birthday'); // Properly initialized with default value
   const [location, setLocation] = useState('');
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [budget, setBudget] = useState('');
@@ -55,7 +55,7 @@ export default function NewEventScreen() {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Date</Text>
           <View style={styles.inputWithIcon}>
-            <Calendar size={20} color="#8E8E93" style={styles.inputIcon} />
+            <Calendar size={20} color="#FF6B8B" style={styles.inputIcon} />
             <TextInput
               style={styles.inputWithIconField}
               value={date}
@@ -68,7 +68,7 @@ export default function NewEventScreen() {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Location (Optional)</Text>
           <View style={styles.inputWithIcon}>
-            <MapPin size={20} color="#8E8E93" style={styles.inputIcon} />
+            <MapPin size={20} color="#FF6B8B" style={styles.inputIcon} />
             <TextInput
               style={styles.inputWithIconField}
               value={location}
@@ -81,7 +81,7 @@ export default function NewEventScreen() {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Gift Budget (Optional)</Text>
           <View style={styles.inputWithIcon}>
-            <Gift size={20} color="#8E8E93" style={styles.inputIcon} />
+            <Gift size={20} color="#FF6B8B" style={styles.inputIcon} />
             <TextInput
               style={styles.inputWithIconField}
               value={budget}

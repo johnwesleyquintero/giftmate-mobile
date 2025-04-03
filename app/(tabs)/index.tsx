@@ -110,7 +110,7 @@ export default function EventsScreen() {
       <View style={styles.eventContent}>
         <View style={styles.eventHeader}>
           <Text style={styles.eventTitle}>{item.title}</Text>
-          <Text style={styles.eventDate}>{new Date(item.date).toLocaleDateString()}</Text>
+          <Text style={[styles.eventDate, {color: '#FF6B8B'}]}>{new Date(item.date).toLocaleDateString()}</Text>
         </View>
         
         {selectedEvent?.id === item.id && (
@@ -118,7 +118,7 @@ export default function EventsScreen() {
             {item.giftIdeas && (
               <View style={styles.section}>
                 <View style={styles.sectionHeader}>
-                  <Gift size={20} color="#007AFF" />
+                  <Gift size={20} color="#FF6B8B" />
                   <Text style={styles.sectionTitle}>Gift Ideas</Text>
                 </View>
                 <FlatList
@@ -134,7 +134,7 @@ export default function EventsScreen() {
             {item.dateIdeas && (
               <View style={styles.section}>
                 <View style={styles.sectionHeader}>
-                  <Heart size={20} color="#007AFF" />
+                  <Heart size={20} color="#FF6B8B" />
                   <Text style={styles.sectionTitle}>Date Ideas</Text>
                 </View>
                 <FlatList
@@ -172,7 +172,7 @@ export default function EventsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F2F7',
+    backgroundColor: '#FFF9FB',
   },
   listContent: {
     padding: 16,
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   },
   eventDate: {
     fontSize: 16,
-    color: '#007AFF',
+    color: '#FF6B8B',
     fontWeight: '500',
   },
   eventDetails: {
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   },
   giftIdeaPrice: {
     fontSize: 14,
-    color: '#007AFF',
+    color: '#FF6B8B',
     fontWeight: '600',
   },
   dateIdeaCard: {
@@ -289,18 +289,25 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: 'absolute',
-    bottom: 24,
     right: 24,
-    backgroundColor: '#007AFF',
+    bottom: 24,
     width: 56,
     height: 56,
     borderRadius: 28,
-    justifyContent: 'center',
-    alignItems: 'center',
+    overflow: 'hidden',
+    elevation: 4,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+  },
+  fabGradient: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FF6B8B',
+    backgroundImage: 'linear-gradient(135deg, #FF6B8B 0%, #FF8E53 100%)',
+    opacity: 1,
   },
 });

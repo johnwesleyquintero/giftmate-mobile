@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Gradient for warmth -->
+  <defs>
+    <linearGradient id="heart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B8B" />
+      <stop offset="100%" stop-color="#FF8E53" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Heart-shaped gift box -->
+  <path d="M50,30 L60,20 L80,40 L70,50 L50,70 L30,50 L20,40 L40,20 Z" 
+        fill="url(#heart-gradient)"/>
+  <path d="M50,30 L60,20 L80,40 M50,30 L40,20 L20,40" 
+        stroke="#fff" 
+        stroke-width="2" 
+        fill="none"/>
+</svg>

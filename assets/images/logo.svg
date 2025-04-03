@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B8B" />
+      <stop offset="100%" stop-color="#FF8E53" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: Heart with bow -->
+  <g transform="translate(20, 20) scale(0.6)">
+    <path d="M50,30 L60,20 L80,40 L70,50 L50,70 L30,50 L20,40 L40,20 Z" 
+          fill="url(#logo-grad)"/>
+    <!-- Bow -->
+    <path d="M50,20 L55,15 L60,20 L55,25 Z" fill="#fff"/>
+    <circle cx="55" cy="20" r="3" fill="#FF3D67"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="65" 
+        font-family="'Helvetica Neue', Arial, sans-serif" 
+        font-size="48" 
+        font-weight="600" 
+        letter-spacing="1.5"
+        fill="url(#logo-grad)">
+    GiftMate
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="100" y="85" 
+        font-family="Helvetica" 
+        font-size="14" 
+        fill="#888">
+    Relationship Companion
+  </text>
+</svg>
