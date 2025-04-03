@@ -17,7 +17,6 @@ This document provides an overview of the current status of the project tasks. I
 | 4   | Features     | Enhance new-event component functionality | ⏳ Pending | Medium   |
 | 5   | Database     | Add Supabase analytics integration        | ⏳ Pending | Medium   |
 
-
 ## Completed Tasks
 
 | ID  | Category     | Description                               | Status  | Priority |

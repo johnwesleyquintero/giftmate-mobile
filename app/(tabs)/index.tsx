@@ -161,7 +161,7 @@ export default function EventsScreen() {
         contentContainerStyle={styles.listContent}
       />
       <Link href="/new-event" asChild>
-        <TouchableOpacity style={styles.fab}>
+        <TouchableOpacity style={styles.fab} onPress={() => console.log('Add button pressed')}>
           <Plus color="#FFFFFF" size={24} />
         </TouchableOpacity>
       </Link>
@@ -289,17 +289,15 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: 'absolute',
-    right: 24,
-    bottom: 24,
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    overflow: 'hidden',
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
+    bottom: 30,
+    right: 30,
+    backgroundColor: '#FF6B8B', // Ensure this color contrasts with the background
+    borderRadius: 30,
+    width: 60,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 5, // Add shadow for better visibility
   },
   fabGradient: {
     width: '100%',

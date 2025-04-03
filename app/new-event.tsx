@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, Image } from 'react-native';
 import { router } from 'expo-router';
 import { Calendar, MapPin, Gift } from 'lucide-react-native';
 
@@ -19,9 +19,9 @@ const interests: Interest[] = [
 ];
 
 export default function NewEventScreen() {
+  const [type, setType] = useState<'birthday' | 'anniversary' | 'other'>('birthday'); // Initialize 'type' first
   const [title, setTitle] = useState('');
   const [date, setDate] = useState(type === 'birthday' ? '2025-01-11' : type === 'anniversary' ? '2025-02-06' : '');
-  const [type, setType] = useState<'birthday' | 'anniversary' | 'other'>('birthday'); // Properly initialized with default value
   const [location, setLocation] = useState('');
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [budget, setBudget] = useState('');
