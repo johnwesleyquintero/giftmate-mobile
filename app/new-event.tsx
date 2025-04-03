@@ -160,7 +160,7 @@ const NewEventScreen = () => {
 
       <Button title="Create Event" onPress={createEvent} disabled={loading} />
     </ScrollView>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
