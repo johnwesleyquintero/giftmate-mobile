@@ -1,12 +1,22 @@
-<div align="center">
-  <img src="assets/images/logo.svg" alt="GiftMate Logo" width="400" />
-  
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/0a2e53da-723e-4bb4-ae3b-6113fc5e96ea/deploy-status)](https://app.netlify.com/sites/giftmate-dev/deploys)
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-  [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)]()
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<div>
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/README.md-purple" alt="Home">
+  </a>
+  <a href="TODO.md">
+    <img src="https://img.shields.io/badge/TODO.md-red" alt="TODO">
+  </a>
+  <a href="TODO_RAW_TASK_DATA.md">
+    <img src="https://img.shields.io/badge/TODO_RAW_TASK_DATA.md-orange" alt="Raw Task Data">
+  </a>
+  <a href="TASK_LIST.md">
+    <img src="https://img.shields.io/badge/TASK_LIST.md-green" alt="Task List">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/LICENSE-lightgrey" alt="License">
+  </a>
 </div>
 
+---
 # GiftMate - Never Miss a Special Occasion Again
 
 ## ✨ Features

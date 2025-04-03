@@ -1,3 +1,22 @@
+<div>
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/README.md-purple" alt="Home">
+  </a>
+  <a href="TODO.md">
+    <img src="https://img.shields.io/badge/TODO.md-red" alt="TODO">
+  </a>
+  <a href="TODO_RAW_TASK_DATA.md">
+    <img src="https://img.shields.io/badge/TODO_RAW_TASK_DATA.md-orange" alt="Raw Task Data">
+  </a>
+  <a href="TASK_LIST.md">
+    <img src="https://img.shields.io/badge/TASK_LIST.md-green" alt="Task List">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/LICENSE-lightgrey" alt="License">
+  </a>
+</div>
+
+---
 The ISC License
 
 Copyright (c) 2025 John Wesley Quintero
