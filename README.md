@@ -6,6 +6,8 @@
   [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)]()
 </div>
 
+Dev: https://stackblitz.com/edit/sb1-yycfvmew
+
 ## Overview
 
 GiftMate - A smart companion app that helps you track important dates, manage gift ideas, and strengthen relationships by never missing special occasions. Perfect for remembering birthdays, anniversaries, and creating thoughtful gift lists for your loved ones.
