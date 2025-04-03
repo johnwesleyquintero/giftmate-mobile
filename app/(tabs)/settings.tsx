@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Switch, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Switch, ScrollView, Linking } from 'react-native';
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react-native';
 
@@ -42,15 +42,15 @@ export default function SettingsScreen() {
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Support</Text>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => Linking.openURL('https://giftmate-dev.netlify.app/pages/about')}>
           <Text style={styles.optionText}>Help Center</Text>
           <ChevronRight size={20} color="#C7C7CC" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => Linking.openURL('https://giftmate-dev.netlify.app/pages/privacy')}>
           <Text style={styles.optionText}>Privacy Policy</Text>
           <ChevronRight size={20} color="#C7C7CC" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => Linking.openURL('https://giftmate-dev.netlify.app/pages/terms')}>
           <Text style={styles.optionText}>Terms of Service</Text>
           <ChevronRight size={20} color="#C7C7CC" />
         </TouchableOpacity>
