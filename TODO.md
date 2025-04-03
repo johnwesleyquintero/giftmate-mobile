@@ -25,6 +25,17 @@ This document provides an overview of the current status of the project tasks, g
 
 ---
 
+## Challanges
+
+Summary of Recommendations (No Organizational Emails):
+
+Android:
+Best: Google Play Console - Closed Testing with a Public Google Group. This gives you the best balance of control and ease of use.
+Alternative: Google Play Console - Open Testing if you need a very large audience and don't mind less control.
+iOS:
+Best: TestFlight - Public Link. This is the only viable option without organizational emails.
+Alternative: TestFlight - Public Link with a Google Group. This gives you the best balance of control and ease of use.
+
 ## Tasks by Status
 
 ### New Tasks

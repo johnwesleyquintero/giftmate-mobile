@@ -166,15 +166,17 @@ const NewEventScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#FFF9FB', // Off White
     padding: 20,
   },
   label: {
     fontSize: 16,
     marginBottom: 5,
+    color: '#8E8E93', // Gray
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#C6C6C8', // Light Gray
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
@@ -184,6 +186,13 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 10,
   },
+  button: {
+    backgroundColor: '#FF6B8B', // Pink
+  },
+  buttonText: {
+    color: '#FFFFFF', // White
+  },
 });
 
 export default NewEventScreen;
+styles.button = { backgroundColor: '#FF6B8B' };
