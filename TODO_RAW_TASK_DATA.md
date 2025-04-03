@@ -29,7 +29,159 @@
 ```json
 {
   // JSON structure representing the task data
+Web Bundling failed 35915ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
 
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+Web Bundling failed 33456ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
+
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+Web Bundling failed 10189ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
+
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+Web Bundling failed 143ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
+
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+Web Bundling failed 129ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
+
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+Web Bundling failed 25ms node_modules\expo-router\entry.js (1 module)
+ ERROR  SyntaxError: C:\Users\johnw\OneDrive\Desktop\giftmate-mobile\app\new-event.tsx: Unexpected token, expected "," (162:17)
+
+  160 |
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
+
+
+
+
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  161 |       <Button title="Create Event" onPress={createEvent} disabled={loading} />
+> 162 |     </ScrollView>;
+> 162 |     </ScrollView>;
+      |                  ^
+  163 |   );
+  164 | };
+  165 |
 }
 ```
 ### Recommendations:
@@ -39,7 +191,7 @@
 
 ```
 ***
-## END TEMPLATE | END RAW TASK DATA
+## END RAW TASK DATA
 
 
 

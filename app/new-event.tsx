@@ -159,7 +159,7 @@ const NewEventScreen = () => {
       <Button title="Pick an image" onPress={pickImage} />
 
       <Button title="Create Event" onPress={createEvent} disabled={loading} />
-    </ScrollView>;
+    </ScrollView>
   );
 };
 
