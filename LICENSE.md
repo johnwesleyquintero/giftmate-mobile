@@ -11,13 +11,13 @@
   <a href="TASK_LIST.md">
     <img src="https://img.shields.io/badge/TASK_LIST.md-green" alt="Task List">
   </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/LICENSE-lightgrey" alt="License">
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/LICENSE.md-lightgrey" alt="LICENSE.md">
   </a>
 </div>
 
 ---
-The ISC License
+The ISC LICENSE.md
 
 Copyright (c) 2025 John Wesley Quintero
 

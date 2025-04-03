@@ -11,8 +11,8 @@
   <a href="TASK_LIST.md">
     <img src="https://img.shields.io/badge/TASK_LIST.md-green" alt="Task List">
   </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/LICENSE-lightgrey" alt="License">
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/LICENSE.md-lightgrey" alt="LICENSE.md">
   </a>
 </div>
 
@@ -105,9 +105,9 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 For detailed documentation, please visit our [documentation site](https://giftmate-docs.example.com).
 
-## 📄 License
+## 📄 LICENSE.md
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is LICENSE.mdd under the MIT LICENSE.md - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 _Last updated: ${new Date().toISOString().split('T')[0]}_
