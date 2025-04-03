@@ -123,7 +123,11 @@ const NewEventScreen = () => {
       />
 
       <Text style={styles.label}>Date *</Text>
-      <Button title={date.toLocaleDateString()} onPress={() => setShowDatePicker(true)} />
+      <Button 
+  title={date.toLocaleDateString()} 
+  onPress={() => setShowDatePicker(true)}
+  color="#FF6B8B"
+/>
       {showDatePicker && (
         <DateTimePicker
           testID="datePicker"
@@ -135,7 +139,11 @@ const NewEventScreen = () => {
       )}
 
       <Text style={styles.label}>Time *</Text>
-      <Button title={time.toLocaleTimeString()} onPress={() => setShowTimePicker(true)} />
+      <Button 
+  title={time.toLocaleTimeString()} 
+  onPress={() => setShowTimePicker(true)}
+  color="#FF6B8B"
+/>
       {showTimePicker && (
         <DateTimePicker
           testID="timePicker"
@@ -156,9 +164,18 @@ const NewEventScreen = () => {
 
       <Text style={styles.label}>Image</Text>
       {image && <Image source={{ uri: image }} style={styles.imagePreview} />}
-      <Button title="Pick an image" onPress={pickImage} />
+      <Button 
+  title="Pick an image" 
+  onPress={pickImage}
+  color="#FF6B8B"
+/>
 
-      <Button title="Create Event" onPress={createEvent} disabled={loading} />
+      <Button 
+        title="Create Event" 
+        onPress={createEvent} 
+        disabled={loading}
+        color="#FF6B8B"
+      />
     </ScrollView>
   )
 };
@@ -188,9 +205,6 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#FF6B8B', // Pink
-  },
-  buttonText: {
-    color: '#FFFFFF', // White
   },
 });
 
