@@ -2,17 +2,17 @@
   <a href="README.md">
     <img src="https://img.shields.io/badge/README.md-purple" alt="Home">
   </a>
-  <a href="TODO.md">
-    <img src="https://img.shields.io/badge/TODO.md-red" alt="TODO">
+  <a href="ABOUT.md">
+    <img src="https://img.shields.io/badge/ABOUT.md-blue" alt="About">
   </a>
-  <a href="TODO_RAW_TASK_DATA.md">
-    <img src="https://img.shields.io/badge/TODO_RAW_TASK_DATA.md-orange" alt="Raw Task Data">
+  <a href="TERMS.md">
+    <img src="https://img.shields.io/badge/TERMS.md-yellow" alt="Terms & Policies">
   </a>
-  <a href="TASK_LIST.md">
-    <img src="https://img.shields.io/badge/TASK_LIST.md-green" alt="Task List">
+  <a href="PRIVACY.md">
+    <img src="https://img.shields.io/badge/PRIVACY.md-orange" alt="Privacy Notice">
   </a>
   <a href="LICENSE.md">
-    <img src="https://img.shields.io/badge/LICENSE.md-lightgrey" alt="LICENSE.md">
+    <img src="https://img.shields.io/badge/LICENSE.md-lightgrey" alt="License">
   </a>
 </div>
 
@@ -41,8 +41,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/giftmate-app.git
-cd giftmate-app
+git clone https://github.com/johnwesleyquintero/giftmate-mobile.git
+cd giftmate-mobile
 
 # Install dependencies
 npm install
