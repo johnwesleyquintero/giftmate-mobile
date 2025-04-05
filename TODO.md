@@ -17,6 +17,7 @@
 </div>
 
 ---
+
 # Project Tasks Status
 
 ## Overview
@@ -41,6 +42,7 @@ Alternative: TestFlight - Public Link with a Google Group. This gives you the be
 ### New Tasks
 
 #### Medium Priority
+
 | ID  | Category | Description                               | Status     |
 | --- | -------- | ----------------------------------------- | ---------- |
 | 4   | Features | Enhance new-event component functionality | ⏳ Pending |
@@ -49,15 +51,17 @@ Alternative: TestFlight - Public Link with a Google Group. This gives you the be
 ### Completed Tasks
 
 #### Critical Priority
+
 | ID  | Category | Description                              | Status  |
 | --- | -------- | ---------------------------------------- | ------- |
 | 1   | Setup    | Project structure and base configuration | ✅ Done |
 
 #### High Priority
-| ID  | Category       | Description                              | Status  |
-| --- | -------------- | ---------------------------------------- | ------- |
-| 2   | Authentication | User authentication and authorization    | ✅ Done |
-| 3   | UI             | Implement tab navigation improvements     | ✅ Done |
+
+| ID  | Category       | Description                           | Status  |
+| --- | -------------- | ------------------------------------- | ------- |
+| 2   | Authentication | User authentication and authorization | ✅ Done |
+| 3   | UI             | Implement tab navigation improvements | ✅ Done |
 
 ---
 
@@ -80,6 +84,5 @@ Alternative: TestFlight - Public Link with a Google Group. This gives you the be
 - This document is updated as tasks progress or new tasks are added.
 
 ---
+
 _Last updated: ${new Date().toISOString().split('T')[0]}_
-
-

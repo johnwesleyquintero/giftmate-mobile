@@ -17,6 +17,7 @@
 </div>
 
 ---
+
 The ISC LICENSE.md
 
 Copyright (c) 2025 John Wesley Quintero

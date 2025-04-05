@@ -17,96 +17,118 @@
 </div>
 
 ---
+
 ## ▲ TASK_LIST_TEMPLATE
-***
+
+---
+
 #### ▲ Node.js crypto
+
 ```bash
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 #### ▲ Tasks-based
+
 ```
-Can you help me implement the {Enhance new-event component functionality} based on 
+Can you help me implement the {Enhance new-event component functionality} based on
 {RAW TASK DATA: Enhance new-event component functionality Task Details}?
 ```
 
 #### ▲ Recommendation-based
+
 ```
 Can you help me implement the {Enhance new-event component functionality} based on {Recommendations}?
 ```
 
 #### ▲ Update `TODO.md`
+
 ```
 - **Update `TODO.md`**: Reorganize the `TODO.md` file by grouping tasks by {New Tasks} and {Completed Tasks}. Add category headers under each priority section and ensure tasks are properly grouped and verified implementaions and fixes.
 ```
 
 #### ▲ Next Steps
+
 ```
 - **Next Steps**: What are our next steps based on the `TODO.md` list and your suggestions?
 ```
 
 #### ▲ Codebase Analysis
+
 ```
 - **Codebase Analysis**: Analyze the current codebase and update the `TODO.md` based on your findings and recommendations.
 ```
 
 #### ▲ Implement Next Steps
+
 ```
 - **Implement Next Steps**: Proceed with the next steps based on your suggestions.
 ```
 
 #### ▲ Error Fixes
+
 ```
 - **Error Fixes**: Implement fixes for errors based on your suggestions.
 ```
 
 #### ▲ MongoDB Integration
+
 ```
 - **MongoDB Integration**: How can we enhance our MongoDB integration across the project based on the `TODO.md` and your analysis?
 ```
 
 #### ▲ SEO Rank Tracker Improvements
+
 ```
 - **SEO Rank Tracker Improvements**: What improvements can we make in our SEO Rank Tracker project based on the `TODO.md` and your analysis?
 ```
 
 #### ▲ Portfolio Project Improvements
+
 ```
 - **Portfolio Project Improvements**: What improvements can we make in our Portfolio project based on the `TODO.md` and your analysis?
 ```
 
 #### ▲ Code Formatting
+
 ```
 - **Code Formatting**: Run `npx prettier --write .` to format all code files. Verify successful completion and fix any errors that arise.
 ```
 
 #### ▲ TypeScript Type-Checking
+
 ```
 - **TypeScript Type-Checking**: Run `npx tsc --noEmit` or `npm run typecheck` to type-check TypeScript code. Fix any errors that arise.
 ```
 
 #### ▲ Code Linting
+
 ```
 - **Code Linting**: Run `pnpm lint` to analyze code quality. Fix any errors that arise.
 ```
 
 #### ▲ Repository Cleanup
+
 ```
 - **Repository Cleanup**: Scan and clean up the repository by removing unnecessary files, except for `TODO.md`, `.code-workspace`, `.rules.md`, `.personal-files`, and `GitHub essential files`.
 ```
 
-******
+---
+
 ## Code Quality Inspection
 
 - **Prettier**: `npx prettier --write .`
+
   - Automatically format all code files.
   - Fix any errors that arise.
 
 - **TypeScript**: `npx tsc --noEmit` or `npm run typecheck`
+
   - Type-check code without generating output files.
   - Fix any errors that arise.
 
 - **Linting**: `pnpm lint`
+
   - Analyze code quality and fix errors.
 
 - **Implement Fixes**:
@@ -114,19 +136,19 @@ Can you help me implement the {Enhance new-event component functionality} based 
 
 ## Scripts
 
-| Command                                                                                                                                    | Description                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Development**                                                                                                                            |                                                                                                                                                                                                                                                                                          |
-| `pnpm dev`                                                                                                                                 | Start Next.js development server                                                                                                                                                                                                                                                         |
-| `pnpm build`                                                                                                                               | Build for production                                                                                                                                                                                                                                                                     |
-| `pnpm start`                                                                                                                               | Start production server                                                                                                                                                                                                                                                                  |
-| **Code Quality**                                                                                                                           |                                                                                                                                                                                                                                                                                          |
-| `npx prettier --write .`                                                                                                                   | Format all code files                                                                                                                                                                                                                                                                   |
-| `pnpm lint`                                                                                                                                | Analyze code quality                                                                                                                                                                                                                                                                    |
-| **TypeScript**                                                                                                                             |                                                                                                                                                                                                                                                                                          |
-| `npx tsc --noEmit`                                                                                                                         | Type-check TypeScript code                                                                                                                                                                                                                                                              |
-| **Utility**                                                                                                                                |                                                                                                                                                                                                                                                                                          |
-| `Start-Process powershell -Verb RunAs -ArgumentList "Remove-Item -Path 'c:\Users\johnw\OneDrive\Desktop\portfolio\.next' -Recurse -Force"` | Remove the Next.js build directory with administrator privileges                                                                                                                                                                                                                         |
+| Command                                                                                                                                    | Description                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| **Development**                                                                                                                            |                                                                  |
+| `pnpm dev`                                                                                                                                 | Start Next.js development server                                 |
+| `pnpm build`                                                                                                                               | Build for production                                             |
+| `pnpm start`                                                                                                                               | Start production server                                          |
+| **Code Quality**                                                                                                                           |                                                                  |
+| `npx prettier --write .`                                                                                                                   | Format all code files                                            |
+| `pnpm lint`                                                                                                                                | Analyze code quality                                             |
+| **TypeScript**                                                                                                                             |                                                                  |
+| `npx tsc --noEmit`                                                                                                                         | Type-check TypeScript code                                       |
+| **Utility**                                                                                                                                |                                                                  |
+| `Start-Process powershell -Verb RunAs -ArgumentList "Remove-Item -Path 'c:\Users\johnw\OneDrive\Desktop\portfolio\.next' -Recurse -Force"` | Remove the Next.js build directory with administrator privileges |
 
 ## Refactoring Guide
 

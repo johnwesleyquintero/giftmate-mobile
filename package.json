@@ -11,12 +11,15 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@lucide/lab": "^0.1.2",
+    "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-native-community/datetimepicker": "^8.2.0",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
+    "@react-navigation/stack": "^7.2.9",
     "@supabase/supabase-js": "^2.39.3",
     "expo": "~52.0.42",
     "expo-blur": "^14.0.3",
+    "expo-calendar": "~10.0.0",
     "expo-constants": "^17.0.5",
     "expo-font": "~13.0.4",
     "expo-google-fonts": "^0.0.0",
@@ -35,19 +38,22 @@
     "lucide-react-native": "^0.475.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "^0.76.8",
+    "react-native": "^0.76.9",
     "react-native-gesture-handler": "~2.20.2",
     "react-native-reanimated": "^3.16.7",
     "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "~4.4.0",
     "react-native-svg": "^15.8.0",
     "react-native-url-polyfill": "^2.0.0",
-    "react-native-web": "^0.19.13",
+    "react-native-web": "~0.19.9",
+    "@expo/webpack-config": "^19.0.0",
     "react-native-webview": "13.12.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "~8.0.1",
     "typescript": "^5.3.3"
   }
 }

@@ -11,12 +11,15 @@ export default function TabLayout() {
         tabBarInactiveTintColor: '#8E8E93',
         headerStyle: styles.header,
         headerTitleStyle: styles.headerTitle,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Events',
-          tabBarIcon: ({ color, size }) => <Calendar size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => (
+            <Calendar size={size} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -37,7 +40,9 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color, size }) => <Settings size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => (
+            <Settings size={size} color={color} />
+          ),
         }}
       />
     </Tabs>

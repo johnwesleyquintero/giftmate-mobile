@@ -1,21 +1,25 @@
 ### Color Palette
 
 1. **Primary Colors:**
+
    - **Pink:** `#FF6B8B`
    - **Light Pink:** `#FFE6EE`
    - **Orange:** `#FF8E53`
 
 2. **Secondary Colors:**
+
    - **Gray:** `#8E8E93`
    - **Light Gray:** `#C6C6C8`
    - **Dark Gray:** `#C7C7CC`
 
 3. **Background Colors:**
+
    - **White:** `#FFFFFF`
    - **Off White:** `#FFF9FB`
    - **Light Background:** `#FFF9F7`
 
 4. **Text Colors:**
+
    - **Black:** Default text color
    - **Red:** `#FF3B30` (used for logout text)
 

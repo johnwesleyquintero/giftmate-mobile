@@ -1,7 +1,30 @@
-import { View, Text, StyleSheet, Switch, ScrollView } from 'react-native';
-import { useState } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Switch,
+  ScrollView,
+  Alert,
+  Platform,
+} from 'react-native';
+import { useState, useEffect } from 'react';
+import * as Notifications from 'expo-notifications';
+import * as Calendar from 'expo-calendar';
+import { supabase } from '../../lib/supabase';
+import { useAuth } from '../../hooks/useAuth';
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+  }),
+});
 
 export default function RemindersScreen() {
+  const { session } = useAuth();
+  const [notificationPermission, setNotificationPermission] = useState(false);
+  const [calendarPermission, setCalendarPermission] = useState(false);
   const [notifications, setNotifications] = useState({
     events: true,
     giftSuggestions: true,
@@ -11,11 +34,108 @@ export default function RemindersScreen() {
     dayOf: true,
   });
 
-  const toggleSwitch = (key: keyof typeof notifications) => {
-    setNotifications(prev => ({
+  useEffect(() => {
+    (async () => {
+      const { status: existingStatus } =
+        await Notifications.getPermissionsAsync();
+      setNotificationPermission(existingStatus === 'granted');
+
+      if (existingStatus !== 'granted') {
+        const { status } = await Notifications.requestPermissionsAsync();
+        setNotificationPermission(status === 'granted');
+      }
+
+      if (Platform.OS === 'ios' || Platform.OS === 'android') {
+        const { status } = await Calendar.requestCalendarPermissionsAsync();
+        setCalendarPermission(status === 'granted');
+      }
+    })();
+  }, []);
+
+  const scheduleNotification = async (event: any) => {
+    if (!notificationPermission) return;
+
+    const triggers = {
+      weekBefore: notifications.weekBefore ? 7 : null,
+      dayBefore: notifications.dayBefore ? 1 : null,
+      dayOf: notifications.dayOf ? 0 : null,
+    };
+
+    Object.entries(triggers).forEach(async ([key, days]) => {
+      if (days === null) return;
+
+      const triggerDate = new Date(event.date);
+      triggerDate.setDate(triggerDate.getDate() - days);
+
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: `Upcoming: ${event.title}`,
+          body: `Don't forget about ${event.title} ${days > 0 ? `in ${days} days` : 'today'}!`,
+          data: { eventId: event.id },
+        },
+        trigger: triggerDate,
+      });
+    });
+  };
+
+  const syncWithCalendar = async (event: any) => {
+    if (!calendarPermission) return;
+
+    try {
+      const calendars = await Calendar.getCalendarsAsync();
+      const defaultCalendar = calendars.find(
+        (calendar) => calendar.isPrimary && calendar.allowsModifications,
+      );
+
+      if (!defaultCalendar) return;
+
+      await Calendar.createEventAsync(defaultCalendar.id, {
+        title: event.title,
+        startDate: new Date(event.date),
+        endDate: new Date(event.date),
+        allDay: true,
+        alarms: [{ relativeOffset: -1440 }], // 1 day before
+      });
+    } catch (error) {
+      console.error('Error syncing with calendar:', error);
+    }
+  };
+
+  const toggleSwitch = async (key: keyof typeof notifications) => {
+    setNotifications((prev) => ({
       ...prev,
       [key]: !prev[key],
     }));
+
+    if (!session?.user) return;
+
+    try {
+      const { data: events, error } = await supabase
+        .from('events')
+        .select('*')
+        .eq('user_id', session.user.id);
+
+      if (error) throw error;
+
+      if (key === 'events' && events) {
+        events.forEach(async (event) => {
+          if (!prev[key]) {
+            await scheduleNotification(event);
+            await syncWithCalendar(event);
+          } else {
+            await Notifications.cancelAllScheduledNotificationsAsync();
+          }
+        });
+      }
+
+      await supabase.from('user_preferences').upsert({
+        user_id: session.user.id,
+        notifications: notifications,
+      });
+    } catch (error) {
+      console.error('Error updating preferences:', error);
+      Alert.alert('Error', 'Failed to update notification preferences');
+    }
   };
 
   return (

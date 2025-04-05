@@ -12,7 +12,7 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
+          let iconName: keyof typeof Ionicons.glyphMap = 'home';
 
           if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home-outline';
@@ -24,14 +24,28 @@ const TabNavigator = () => {
 
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: '#FF6B8B',
+        tabBarInactiveTintColor: '#8E8E93',
         headerShown: false,
+        tabBarAccessibilityLabel: 'Main navigation',
+        tabBarLabelStyle: { fontSize: 12 },
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Events" component={EventsScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ accessibilityLabel: 'Home screen' }}
+      />
+      <Tab.Screen
+        name="Events"
+        component={EventsScreen}
+        options={{ accessibilityLabel: 'Events screen' }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{ accessibilityLabel: 'Profile settings' }}
+      />
     </Tab.Navigator>
   );
 };

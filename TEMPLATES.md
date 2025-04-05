@@ -17,6 +17,7 @@
 </div>
 
 ---
+
 ## RAW TASK DATA: Implementation of Task Data Based on Recommendations | TEMPLATE
 
 ### Task Overview
@@ -26,17 +27,20 @@
 ### Task Details
 
 **Task Data:**
+
 ```json
 {
   // JSON structure representing the task data
-
 }
 ```
-### Recommendations:
-```ts
-  // fixed_code.ts
-  // TypeScript code implementing the recommended fixes or enhancements
 
+### Recommendations:
+
+```ts
+// fixed_code.ts
+// TypeScript code implementing the recommended fixes or enhancements
 ```
-***
+
+---
+
 ## END TEMPLATE | END RAW TASK DATA TEMPLATE

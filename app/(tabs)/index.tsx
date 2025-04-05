@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 import { Plus, Gift, Calendar, Heart } from 'lucide-react-native';
 import { Link } from 'expo-router';
 import { useState } from 'react';
@@ -35,23 +42,26 @@ const mockEvents: Event[] = [
         id: 'g1',
         name: 'Spa Day Package',
         price: 149.99,
-        image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200'
+        image:
+          'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200',
       },
       {
         id: 'g2',
         name: 'Cooking Class',
         price: 89.99,
-        image: 'https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=200'
-      }
+        image:
+          'https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=200',
+      },
     ],
     dateIdeas: [
       {
         id: 'd1',
         name: 'Afternoon Tea',
-        image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200',
-        rating: 4.8
-      }
-    ]
+        image:
+          'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: '2',
@@ -64,17 +74,19 @@ const mockEvents: Event[] = [
         id: 'g3',
         name: 'Couples Massage',
         price: 199.99,
-        image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200'
-      }
+        image:
+          'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200',
+      },
     ],
     dateIdeas: [
       {
         id: 'd2',
         name: 'Sunset Dinner Cruise',
-        image: 'https://images.unsplash.com/photo-1514302240736-b1fee5985889?w=200',
-        rating: 4.9
-      }
-    ]
+        image:
+          'https://images.unsplash.com/photo-1514302240736-b1fee5985889?w=200',
+        rating: 4.9,
+      },
+    ],
   },
 ];
 
@@ -102,17 +114,24 @@ export default function EventsScreen() {
   );
 
   const renderEvent = ({ item }: { item: Event }) => (
-    <TouchableOpacity 
-      style={[styles.eventCard, selectedEvent?.id === item.id && styles.eventCardSelected]}
-      onPress={() => setSelectedEvent(selectedEvent?.id === item.id ? null : item)}
+    <TouchableOpacity
+      style={[
+        styles.eventCard,
+        selectedEvent?.id === item.id && styles.eventCardSelected,
+      ]}
+      onPress={() =>
+        setSelectedEvent(selectedEvent?.id === item.id ? null : item)
+      }
     >
       <Image source={{ uri: item.image }} style={styles.eventImage} />
       <View style={styles.eventContent}>
         <View style={styles.eventHeader}>
           <Text style={styles.eventTitle}>{item.title}</Text>
-          <Text style={[styles.eventDate, {color: '#FF6B8B'}]}>{new Date(item.date).toLocaleDateString()}</Text>
+          <Text style={[styles.eventDate, { color: '#FF6B8B' }]}>
+            {new Date(item.date).toLocaleDateString()}
+          </Text>
         </View>
-        
+
         {selectedEvent?.id === item.id && (
           <View style={styles.eventDetails}>
             {item.giftIdeas && (
@@ -130,7 +149,7 @@ export default function EventsScreen() {
                 />
               </View>
             )}
-            
+
             {item.dateIdeas && (
               <View style={styles.section}>
                 <View style={styles.sectionHeader}>
@@ -161,7 +180,10 @@ export default function EventsScreen() {
         contentContainerStyle={styles.listContent}
       />
       <Link href="/new-event" asChild>
-        <TouchableOpacity style={styles.fab} onPress={() => console.log('Add button pressed')}>
+        <TouchableOpacity
+          style={styles.fab}
+          onPress={() => console.log('Add button pressed')}
+        >
           <Plus color="#FFFFFF" size={24} />
         </TouchableOpacity>
       </Link>

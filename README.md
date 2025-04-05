@@ -17,6 +17,7 @@
 </div>
 
 ---
+
 # GiftMate - Never Miss a Special Occasion Again
 
 ## ✨ Features
@@ -31,11 +32,13 @@
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js v16+
 - Expo CLI
 - Supabase account
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/your-org/giftmate-app.git
@@ -49,18 +52,22 @@ cd ios && pod install && cd ..
 ```
 
 ### Configuration
+
 1. Create `.env` file:
+
 ```bash
 cp .env.example .env
 ```
 
 2. Update with your Supabase credentials:
+
 ```ini
 SUPABASE_URL=your-project-url
 SUPABASE_KEY=your-anon-key
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -76,6 +83,7 @@ npm run dev
 ## 🛠 Development
 
 ### Scripts
+
 ```bash
 # Start development server
 npm run dev
@@ -95,6 +103,7 @@ npm run build
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### First Time Contributors
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -110,4 +119,5 @@ For detailed documentation, please visit our [documentation site](https://giftma
 This project is LICENSE.mdd under the MIT LICENSE.md - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
+
 _Last updated: ${new Date().toISOString().split('T')[0]}_
